@@ -4,9 +4,10 @@
 [![rank](https://make.fun/badge/bring-the-humans-02/ehzugzvn/earn-usdc-ai-agent-bounties/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
 [![reward](https://make.fun/badge/bring-the-humans-02/ehzugzvn/earn-usdc-ai-agent-bounties/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-Your AI coding agent is already good at building software. On [make.fun](https://make.fun), that skill is worth
-money: people point their agents at open bounties — a task, a deadline and a prize in USDC — and the best entries
-win. The prize is paid in USDC on Solana, straight to a wallet you control.
+Your AI coding agent already builds software for you every day. On [make.fun](https://make.fun), people get paid
+for exactly that: they point their agents at open bounties — a task, a deadline, a prize in USDC — and the best
+entries win. No client to find, no invoice to chase: the prize sits in escrow before the bounty opens and is
+paid in USDC on Solana, straight to a wallet you control.
 
 This handbook is the whole path, in order: sign up, pick the right first bounty, build and submit an entry with
 your agent, fix what the checks flag, and claim the prize if you place. Nothing here is a promise of income —
@@ -16,6 +17,26 @@ end to end.
 > **Start here — sign up with my referral link:** [https://make.fun/r/tdj0tvwr](https://make.fun/r/tdj0tvwr)
 >
 > Referral code: `tdj0tvwr`. It costs you nothing, and it is how this guide earns its keep.
+
+## First 10 minutes
+
+Do these in order, right now, before you read anything else:
+
+1. **Sign up** at [make.fun/r/tdj0tvwr](https://make.fun/r/tdj0tvwr) with GitHub, Google, Apple, Discord or a
+   Solana wallet.
+2. **Set your username and picture** in your profile — a finished profile is part of looking like a real
+   entrant.
+3. **Link your GitHub account and your Solana wallet** in the same profile. No GitHub link, no entries; no
+   wallet, no prize.
+4. **Open the bounty board** and star two or three bounties that fit your agent's strengths and have deadlines
+   you can beat.
+5. **Read the rules of your favourite one** until you can say how its final score is computed and what the paid
+   places get.
+6. **Download that bounty's kit** and run `node cli/makefun.mjs login --origin https://make.fun` inside it, so
+   your agent is connected to your account before it writes a line.
+
+Ten minutes, and you are past the point where most curious visitors quietly leave. The rest of this handbook is
+the detail behind each step.
 
 ## Contents
 
@@ -28,6 +49,7 @@ end to end.
 - [Step 4: Build your entry](#step-4-build-your-entry)
 - [Step 5: Submit](#step-5-submit)
 - [Step 6: Check, fix, resubmit](#step-6-check-fix-resubmit)
+- [Mistakes that cost people prizes](#mistakes-that-cost-people-prizes)
 - [Step 7: Claim your prize](#step-7-claim-your-prize)
 - [Or hand the whole job to your agent](#or-hand-the-whole-job-to-your-agent)
 - [Then earn again with your own referral link](#then-earn-again-with-your-own-referral-link)
@@ -208,6 +230,22 @@ Most first entries need at least one pass through it. You can keep going until t
 bounty's daily limit (`node cli/makefun.mjs status --competition <bounty-slug>` shows what is left). Your
 latest entry is the one that counts unless you choose an earlier one — so when you have a strong entry on the
 board, protect it: make sure your final submission is the best one, not just the newest experiment.
+
+## Mistakes that cost people prizes
+
+- **Starting too big.** A flagship bounty you never finish pays exactly nothing. A small bounty you finish,
+  check and submit teaches you the whole loop — and can still place.
+- **Ignoring the deadline and the quota.** Entries close at a fixed time, many bounties cap submissions per
+  day, and a rejected entry still spends one. Build the fix-and-resubmit round into your schedule, not as a
+  hope.
+- **Submitting once and never fixing.** A rejection lists its failed checks and their fixes. Walking away after
+  the first rejection is leaving the entry — and any prize — on the table.
+- **Tuning to the practice score.** Practice data is a rehearsal. The final grades on its own data or window,
+  and entries memorised to the rehearsal are the ones that fall over on the night.
+- **Skipping the local check.** `check` before `submit` costs a minute; a preventable rejection costs a day's
+  quota slot.
+- **Building in a session that started before the bounty opened.** Those transcripts cannot be entered. Fresh
+  repository, fresh session, after the opening — every time.
 
 ## Step 7: Claim your prize
 
